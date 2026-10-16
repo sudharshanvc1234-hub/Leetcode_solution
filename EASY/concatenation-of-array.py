@@ -1,6 +1,6 @@
 # Date: 16-10-2026
 # Problem Number: 1929
-# Problem Title: 
+# Problem Title: Concatenation of Array
 # LeetCode Link: https://leetcode.com/problems/concatenation-of-array/description/
 # Difficulty: Easy
 # Topic: Array
