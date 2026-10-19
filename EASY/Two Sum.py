@@ -4,12 +4,15 @@
 # LeetCode Link: https://leetcode.com/problems/two-sum/description/
 # Difficulty: Easy
 # Topic: Array, Brute force
-# Time Complexity: O(N**2)
-# Space Complexity: O(1)
-
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        seen = {}
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
+            need = target - nums[i]
+
+            if need in seen:
+               return [seen[need], i] 
+               
+            seen[nums[i]] = i
