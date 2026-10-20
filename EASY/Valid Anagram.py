@@ -1,0 +1,27 @@
+# Date: 20-10-2026
+# Problem Number: 242
+# Problem Title: Valid Anagram
+# LeetCode Link: https://leetcode.com/problems/valid-anagram/description/
+# Difficulty: Easy
+# Topic: Hastmap, String
+# Time Complexity: O(N)
+# Space Complexity: O(k)
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+
+        count={}
+
+        for ch in s:
+            count[ch]=count.get(ch,0)+1
+
+        for ch in t:
+            if ch not in count or count[ch]==0:
+                return False
+
+            count[ch]-=1
+        return True
+
+
+        
